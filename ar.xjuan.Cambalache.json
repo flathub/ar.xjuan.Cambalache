@@ -47,8 +47,8 @@
                 {
                     "type" : "git",
                     "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.8.1",
-                    "commit": "eaf9aab23ac04352ab7b18bf62c6007b786bd018"
+                    "branch": "cmb-0-8",
+                    "commit": "e3b7e952bde91bf2c14ea8681252a7494d2ee2b9"
                 }
             ]
         }
