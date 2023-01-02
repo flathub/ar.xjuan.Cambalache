@@ -1,7 +1,7 @@
 {
     "app-id" : "ar.xjuan.Cambalache",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "separate-locales": false,
     "command" : "cambalache",
@@ -31,10 +31,9 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.7.4",
-                    "commit": "d220d754dc65752c24f2509300112d122391d2de"
+                    "type" : "archive",
+                    "url": "https://gitlab.gnome.org/jpu/cambalache/-/archive/0.10.3/cambalache-0.10.3.tar.bz2",
+                    "sha256": "6a4ba87ec82e80a529a6a0804fe6986294b5de7f4ab0d28be6d4baf96a89dad5"
                 }
             ]
         }
