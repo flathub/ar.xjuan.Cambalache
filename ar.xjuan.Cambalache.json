@@ -1,7 +1,7 @@
 {
     "app-id" : "ar.xjuan.Cambalache",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "separate-locales": false,
     "command" : "cambalache",
@@ -54,7 +54,11 @@
                         "project-id": 234786,
                         "stable-only": true,
                         "tag-template": "$version"
-            }
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/webkit-req.patch"
                 }
             ]
         }
