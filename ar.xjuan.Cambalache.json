@@ -47,8 +47,8 @@
                 {
                     "type" : "git",
                     "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.12.0",
-                    "commit": "d3b15c274a00a7e5ecdedd5ed106586c845424f4",
+                    "tag": "0.12.1",
+                    "commit": "3f63a1a56596982ad737308e4171262d1b030f86",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 234786,
