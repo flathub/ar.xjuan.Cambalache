@@ -1,11 +1,11 @@
 {
-    "app-id" : "ar.xjuan.Cambalache",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
-    "sdk" : "org.gnome.Sdk",
+    "app-id": "ar.xjuan.Cambalache",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
     "separate-locales": false,
-    "command" : "cambalache",
-    "finish-args" : [
+    "command": "cambalache",
+    "finish-args": [
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
@@ -13,7 +13,7 @@
         "--filesystem=home",
         "--device=dri"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -24,7 +24,7 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
             "name": "python3-lxml",
             "buildsystem": "simple",
@@ -40,15 +40,15 @@
             ]
         },
         {
-            "name" : "cambalache",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "cambalache",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.17.2",
-                    "commit": "947462afa0abf1883ea8f02fffbf49e5c0792ae6",
+                    "tag": "0.90.2",
+                    "commit": "3582d51bc8cf2c2512b938f9bdb86898f508b534",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 234786,
