@@ -1,11 +1,11 @@
 {
-    "app-id" : "ar.xjuan.Cambalache",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
-    "sdk" : "org.gnome.Sdk",
+    "app-id": "ar.xjuan.Cambalache",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "46",
+    "sdk": "org.gnome.Sdk",
     "separate-locales": false,
-    "command" : "cambalache",
-    "finish-args" : [
+    "command": "cambalache",
+    "finish-args": [
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
@@ -13,7 +13,7 @@
         "--filesystem=home",
         "--device=dri"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -24,7 +24,7 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
             "name": "python3-lxml",
             "buildsystem": "simple",
@@ -40,50 +40,49 @@
             ]
         },
         {
-          "name": "libseat",
-          "buildsystem": "meson",
-          "config-opts": [
-            "-Dserver=disabled",
-            "-Dman-pages=disabled"
-          ],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.8.0.tar.gz",
-              "sha256": "a562a44ee33ccb20954a1c1ec9a90ecb2db7a07ad6b18d0ac904328efbcf65a0",
-              "x-checker-data": {
-                "type": "anitya",
-                "project-id": 234932,
-                "stable-only": true,
-                "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
-              }
-            }
-          ]
+            "name": "libseat",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dserver=disabled",
+                "-Dman-pages=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.8.0.tar.gz",
+                    "sha256": "a562a44ee33ccb20954a1c1ec9a90ecb2db7a07ad6b18d0ac904328efbcf65a0",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 234932,
+                        "stable-only": true,
+                        "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
+                    }
+                }
+            ]
         },
         {
-          "name": "wlroots",
-          "builddir": true,
-          "buildsystem": "meson",
-          "config-opts": [
-          ],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
-              "branch": "8abd43803bd1069c47bbbf83c8ff6042b29f1b19"
-            }
-          ]
-       },
-       {
-            "name" : "cambalache",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "wlroots",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [],
+            "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
+                    "branch": "8abd43803bd1069c47bbbf83c8ff6042b29f1b19"
+                }
+            ]
+        },
+        {
+            "name": "cambalache",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
                     "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.91.1",
-                    "commit": "60e8d34f00ab0fe4b50b44b74ee69683bcf25f2f",
+                    "tag": "0.90.2",
+                    "commit": "3582d51bc8cf2c2512b938f9bdb86898f508b534",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 234786,
