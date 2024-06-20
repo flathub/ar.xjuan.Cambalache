@@ -1,7 +1,7 @@
 {
     "app-id" : "ar.xjuan.Cambalache",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "separate-locales": false,
     "command" : "cambalache",
@@ -40,6 +40,41 @@
             ]
         },
         {
+          "name": "libseat",
+          "buildsystem": "meson",
+          "config-opts": [
+            "-Dserver=disabled",
+            "-Dman-pages=disabled"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.8.0.tar.gz",
+              "sha256": "a562a44ee33ccb20954a1c1ec9a90ecb2db7a07ad6b18d0ac904328efbcf65a0",
+              "x-checker-data": {
+                "type": "anitya",
+                "project-id": 234932,
+                "stable-only": true,
+                "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
+              }
+            }
+          ]
+        },
+        {
+          "name": "wlroots",
+          "builddir": true,
+          "buildsystem": "meson",
+          "config-opts": [
+          ],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
+              "branch": "8abd43803bd1069c47bbbf83c8ff6042b29f1b19"
+            }
+          ]
+       },
+       {
             "name" : "cambalache",
             "builddir" : true,
             "buildsystem" : "meson",
@@ -47,8 +82,8 @@
                 {
                     "type" : "git",
                     "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-                    "tag": "0.17.2",
-                    "commit": "947462afa0abf1883ea8f02fffbf49e5c0792ae6",
+                    "tag": "0.91.1",
+                    "commit": "60e8d34f00ab0fe4b50b44b74ee69683bcf25f2f",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 234786,
