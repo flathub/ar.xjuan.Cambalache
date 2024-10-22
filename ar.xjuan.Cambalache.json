@@ -1,111 +1,111 @@
 {
-  "app-id": "ar.xjuan.Cambalache",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "47beta",
-  "sdk": "org.gnome.Sdk",
-  "separate-locales": false,
-  "command": "cambalache",
-  "finish-args": [
-    "--share=ipc",
-    "--share=network",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--filesystem=home",
-    "--device=dri"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    {
-      "name": "python3-lxml",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
-      ],
-      "sources": [
+    "app-id": "ar.xjuan.Cambalache",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "47beta",
+    "sdk": "org.gnome.Sdk",
+    "separate-locales": false,
+    "command": "cambalache",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--filesystem=home",
+        "--device=dri"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz",
-          "sha256": "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
-        }
-      ]
-    },
-    {
-      "name": "libseat",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dserver=disabled",
-        "-Dman-pages=disabled"
-      ],
-      "sources": [
+            "name": "python3-lxml",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz",
+                    "sha256": "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
+                }
+            ]
+        },
         {
-          "type": "archive",
-          "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.8.0.tar.gz",
-          "sha256": "a562a44ee33ccb20954a1c1ec9a90ecb2db7a07ad6b18d0ac904328efbcf65a0",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 234932,
-            "stable-only": true,
-            "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
-          }
-        }
-      ]
-    },
-    {
-      "name": "wlroots",
-      "builddir": true,
-      "buildsystem": "meson",
-      "config-opts": [],
-      "sources": [
+            "name": "libseat",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dserver=disabled",
+                "-Dman-pages=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.0.tar.gz",
+                    "sha256": "4276d1380c67e30a63c289b35f7bf955e126e6daf3596cd5aa6080670aa1214c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 234932,
+                        "stable-only": true,
+                        "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
+                    }
+                }
+            ]
+        },
         {
-          "type": "git",
-          "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
-          "tag": "0.18",
-          "commit": "4666996b2a34b53899aedafcd3586fb1c7a16af6"
-        }
-      ]
-    },
-    {
-      "name": "casilda",
-      "builddir": true,
-      "buildsystem": "meson",
-      "config-opts": [],
-      "sources": [
+            "name": "wlroots",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
+                    "tag": "0.18",
+                    "commit": "4666996b2a34b53899aedafcd3586fb1c7a16af6"
+                }
+            ]
+        },
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jpu/casilda.git",
-          "tag": "0.1.1",
-          "commit": "1cd675f1d2445cd5aa31cc0b2b0da6b505c53025"
-        }
-      ]
-    },
-    {
-      "name": "cambalache",
-      "builddir": true,
-      "buildsystem": "meson",
-      "sources": [
+            "name": "casilda",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jpu/casilda.git",
+                    "tag": "0.1.1",
+                    "commit": "1cd675f1d2445cd5aa31cc0b2b0da6b505c53025"
+                }
+            ]
+        },
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "0.91.3",
-          "commit": "4915f19f9f6a502f20b4a487929578ee0fa01ba7",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 234786,
-            "stable-only": true,
-            "tag-template": "$version"
-          }
+            "name": "cambalache",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jpu/cambalache.git",
+                    "tag": "0.92.1",
+                    "commit": "d88d41f9d5aaccc3a58945bd44960b149a327f4e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 234786,
+                        "stable-only": true,
+                        "tag-template": "$version"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
