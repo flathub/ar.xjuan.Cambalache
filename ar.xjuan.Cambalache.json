@@ -1,7 +1,7 @@
 {
   "app-id": "ar.xjuan.Cambalache",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "47",
+  "runtime-version": "48",
   "sdk": "org.gnome.Sdk",
   "separate-locales": false,
   "command": "cambalache",
@@ -34,8 +34,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz",
-          "sha256": "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
+          "url" : "https://files.pythonhosted.org/packages/80/61/d3dc048cd6c7be6fe45b80cedcbdd4326ba4d550375f266d9f4246d0f4bc/lxml-5.3.2.tar.gz",
+          "sha256" : "773947d0ed809ddad824b7b14467e1a481b8976e87278ac4a730c2f7c7fcddc1"
         }
       ]
     },
@@ -96,8 +96,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "0.94.1",
-          "commit": "4f7272b2f914334f7a7b202bcca389e5df3a1e21",
+          "tag": "0.96.0",
+          "commit": "7baf191c0be64c9d6024326a3b3f6cf44de09b2c",
           "x-checker-data": {
             "type": "anitya",
             "project-id": 234786,
