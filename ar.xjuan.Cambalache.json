@@ -1,7 +1,7 @@
 {
   "app-id": "ar.xjuan.Cambalache",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
+  "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
   "separate-locales": false,
   "command": "cambalache",
@@ -96,8 +96,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "0.96.1",
-          "commit": "ae11d6485a851b786abc7d8b3c6b87415eef8d2c",
+          "tag": "0.96.3",
+          "commit": "ae6ba496fe4e0df26b4ec2c9956f773fba286eb1",
           "x-checker-data": {
             "type": "anitya",
             "project-id": 234786,
