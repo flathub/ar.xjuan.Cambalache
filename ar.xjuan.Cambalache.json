@@ -1,106 +1,106 @@
 {
-  "app-id": "ar.xjuan.Cambalache",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "50",
-  "sdk": "org.gnome.Sdk",
-  "separate-locales": false,
-  "command": "cambalache",
-  "finish-args": [
-    "--share=ipc",
-    "--share=network",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--filesystem=home",
-    "--device=dri"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
-  ],
-  "modules" : [
-    {
-      "name" : "python3-lxml",
-      "buildsystem" : "simple",
-      "build-commands" : [
-        "pip3 install --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
-      ],
-      "sources" : [
+    "app-id": "ar.xjuan.Cambalache",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "50",
+    "sdk": "org.gnome.Sdk",
+    "separate-locales": false,
+    "command": "cambalache",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--filesystem=home",
+        "--device=dri"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
         {
-          "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz",
-          "sha256" : "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
-        }
-      ]
-    },
-    {
-      "name" : "libseat",
-      "buildsystem" : "meson",
-      "config-opts" : [
-        "-Dserver=disabled",
-        "-Dman-pages=disabled"
-      ],
-      "sources" : [
+            "name": "python3-lxml",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz",
+                    "sha256": "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
+                }
+            ]
+        },
         {
-          "type" : "git",
-          "url" : "https://git.sr.ht/~kennylevinsen/seatd",
-          "tag" : "0.9.3",
-          "commit" : "daa8196e10b180b8b0caeafa8e5f860eb1bd6706"
-        }
-      ]
-    },
-    {
-      "name" : "wlroots",
-      "builddir" : true,
-      "buildsystem" : "meson",
-      "config-opts" : [],
-      "sources" : [
+            "name": "libseat",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dserver=disabled",
+                "-Dman-pages=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://git.sr.ht/~kennylevinsen/seatd",
+                    "tag": "0.9.3",
+                    "commit": "daa8196e10b180b8b0caeafa8e5f860eb1bd6706"
+                }
+            ]
+        },
         {
-          "type" : "git",
-          "url" : "https://gitlab.freedesktop.org/wlroots/wlroots.git",
-          "tag" : "0.20.0",
-          "commit" : "c1d38536c926134698ff2615843e0d4103e84ac4"
-        }
-      ]
-    },
-    {
-      "name" : "casilda",
-      "builddir" : true,
-      "buildsystem" : "meson",
-      "config-opts" : [],
-      "sources" : [
+            "name": "wlroots",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
+                    "tag": "0.20.0",
+                    "commit": "c1d38536c926134698ff2615843e0d4103e84ac4"
+                }
+            ]
+        },
         {
-          "type" : "git",
-          "url" : "https://gitlab.gnome.org/jpu/casilda.git",
-          "tag" : "1.2.4",
-          "commit" : "ce1d4b01b5855e09bb1dce7d04d99c16759b514b"
-        }
-      ]
-    },
-    {
-      "name": "cambalache",
-      "builddir": true,
-      "buildsystem": "meson",
-      "sources": [
+            "name": "casilda",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jpu/casilda.git",
+                    "tag": "1.2.4",
+                    "commit": "ce1d4b01b5855e09bb1dce7d04d99c16759b514b"
+                }
+            ]
+        },
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "1.0.1",
-          "commit": "764912ff05b1087530b4a7694ad82bddd3532374",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 234786,
-            "stable-only": true,
-            "tag-template": "$version"
-          }
+            "name": "cambalache",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jpu/cambalache.git",
+                    "tag": "1.0",
+                    "commit": "0a09e37d991ef22cbef478a89de64960a3e52903",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 234786,
+                        "stable-only": true,
+                        "tag-template": "$version"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
