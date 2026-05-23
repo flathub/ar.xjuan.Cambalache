@@ -94,10 +94,8 @@
           "tag": "1.0.2",
           "commit": "cf00b73ffd1bef128edba698369d36b419b0e394",
           "x-checker-data": {
-            "type": "anitya",
-            "project-id": 234786,
-            "stable-only": true,
-            "tag-template": "$version"
+            "type": "git",
+            "version-scheme": "semantic"
           }
         }
       ]
