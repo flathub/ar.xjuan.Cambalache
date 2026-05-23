@@ -24,62 +24,62 @@
     "*.la",
     "*.a"
   ],
-  "modules" : [
+  "modules": [
     {
-      "name" : "python3-lxml",
-      "buildsystem" : "simple",
-      "build-commands" : [
+      "name": "python3-lxml",
+      "buildsystem": "simple",
+      "build-commands": [
         "pip3 install --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
       ],
-      "sources" : [
+      "sources": [
         {
-          "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz",
-          "sha256" : "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz",
+          "sha256": "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
         }
       ]
     },
     {
-      "name" : "libseat",
-      "buildsystem" : "meson",
-      "config-opts" : [
+      "name": "libseat",
+      "buildsystem": "meson",
+      "config-opts": [
         "-Dserver=disabled",
         "-Dman-pages=disabled"
       ],
-      "sources" : [
+      "sources": [
         {
-          "type" : "git",
-          "url" : "https://git.sr.ht/~kennylevinsen/seatd",
-          "tag" : "0.9.3",
-          "commit" : "daa8196e10b180b8b0caeafa8e5f860eb1bd6706"
+          "type": "git",
+          "url": "https://git.sr.ht/~kennylevinsen/seatd",
+          "tag": "0.9.3",
+          "commit": "daa8196e10b180b8b0caeafa8e5f860eb1bd6706"
         }
       ]
     },
     {
-      "name" : "wlroots",
-      "builddir" : true,
-      "buildsystem" : "meson",
-      "config-opts" : [],
-      "sources" : [
+      "name": "wlroots",
+      "builddir": true,
+      "buildsystem": "meson",
+      "config-opts": [],
+      "sources": [
         {
-          "type" : "git",
-          "url" : "https://gitlab.freedesktop.org/wlroots/wlroots.git",
-          "tag" : "0.20.0",
-          "commit" : "c1d38536c926134698ff2615843e0d4103e84ac4"
+          "type": "git",
+          "url": "https://gitlab.freedesktop.org/wlroots/wlroots.git",
+          "tag": "0.20.0",
+          "commit": "c1d38536c926134698ff2615843e0d4103e84ac4"
         }
       ]
     },
     {
-      "name" : "casilda",
-      "builddir" : true,
-      "buildsystem" : "meson",
-      "config-opts" : [],
-      "sources" : [
+      "name": "casilda",
+      "builddir": true,
+      "buildsystem": "meson",
+      "config-opts": [],
+      "sources": [
         {
-          "type" : "git",
-          "url" : "https://gitlab.gnome.org/jpu/casilda.git",
-          "tag" : "1.2.4",
-          "commit" : "ce1d4b01b5855e09bb1dce7d04d99c16759b514b"
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jpu/casilda.git",
+          "tag": "1.2.4",
+          "commit": "ce1d4b01b5855e09bb1dce7d04d99c16759b514b"
         }
       ]
     },
@@ -91,8 +91,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "1.0.1",
-          "commit": "764912ff05b1087530b4a7694ad82bddd3532374",
+          "tag": "1.0.2",
+          "commit": "cf00b73ffd1bef128edba698369d36b419b0e394",
           "x-checker-data": {
             "type": "anitya",
             "project-id": 234786,
