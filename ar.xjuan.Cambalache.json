@@ -91,8 +91,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "1.0.2",
-          "commit": "cf00b73ffd1bef128edba698369d36b419b0e394",
+          "tag": "1.0.3",
+          "commit": "5ba39823d0e7fda840ad20d5c891b77c2bf11c8f",
           "x-checker-data": {
             "type": "git",
             "version-scheme": "semantic"
