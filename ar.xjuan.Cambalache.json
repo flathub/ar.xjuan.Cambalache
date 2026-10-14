@@ -1,7 +1,7 @@
 {
   "app-id": "ar.xjuan.Cambalache",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "50",
+  "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
   "separate-locales": false,
   "command": "cambalache",
@@ -34,8 +34,8 @@
       "sources" : [
         {
           "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz",
-          "sha256" : "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
+          "url" : "https://files.pythonhosted.org/packages/23/ad/28ecd7cb894d172f3c9c80a075eeeb2017ac62e3632cee05a5f9493547eb/lxml-6.1.3.tar.gz",
+          "sha256" : "45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21"
         }
       ]
     },
@@ -64,8 +64,8 @@
         {
           "type" : "git",
           "url" : "https://gitlab.freedesktop.org/wlroots/wlroots.git",
-          "tag" : "0.20.0",
-          "commit" : "c1d38536c926134698ff2615843e0d4103e84ac4"
+          "tag" : "0.20.2",
+          "commit" : "d783533489e1f75d6886c2ab5c5960090ef268f8"
         }
       ]
     },
@@ -78,8 +78,22 @@
         {
           "type" : "git",
           "url" : "https://gitlab.gnome.org/jpu/casilda.git",
-          "tag" : "1.4.0",
-          "commit" : "0c6ff1490a0199024b30bf9a237b5d41856a0e81"
+          "tag" : "1.6.0",
+          "commit" : "47073ac41f7856efc88e3ddbd0bd5b65eebaa7fb"
+        }
+      ]
+    },
+    {
+      "name" : "handy",
+      "builddir" : true,
+      "buildsystem" : "meson",
+      "config-opts" : [],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://gitlab.gnome.org/GNOME/libhandy.git",
+          "tag" : "1.8.3",
+          "commit" : "9b0071408ce86a3ef843806fddd723a85f6f2416"
         }
       ]
     },
@@ -91,8 +105,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jpu/cambalache.git",
-          "tag": "1.0.3",
-          "commit": "5ba39823d0e7fda840ad20d5c891b77c2bf11c8f",
+          "tag": "1.2.0",
+          "commit": "f0a0e744f7426e0cbcf8fd1e9cc66ccd999050e6",
           "x-checker-data": {
             "type": "git",
             "version-scheme": "semantic"
